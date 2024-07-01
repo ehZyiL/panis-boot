@@ -25,7 +25,7 @@ import java.util.Map;
 public class CodeGenerator {
 
     // 生成存储路径
-    private static final String EXPORT_FILE_PATH = "/Users/paynezhuang/Desktop/1/";
+    private static final String EXPORT_FILE_PATH = "D:\\Study\\Java\\panis-boot\\1\\";
 
     // 父包名
     private static final String PARENT = "com.izpan";
@@ -46,7 +46,7 @@ public class CodeGenerator {
     public static void main(String[] args) {
         CUSTOM_MAP.put("parent", PARENT);
         // 数据源配置
-        FastAutoGenerator.create("jdbc:mysql://127.0.0.1:3306/panis_boot?serverTimezone=GMT%2B8", "root", "root")
+        FastAutoGenerator.create("jdbc:mysql://39.106.142.14:3306/panis_boot?serverTimezone=GMT%2B8", "root", "9988174")
                 .globalConfig(builder -> {
                     // 设置作者
                     builder.author(AUTHOR)

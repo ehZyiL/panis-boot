@@ -26,5 +26,24 @@
             <groupId>com.izpan</groupId>
             <artifactId>panis-boot-starter-database-mysql</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.izpan</groupId>
+            <artifactId>panis-boot-starter-relay-proxy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp-sse</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.26</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
     </dependencies>
 </project>

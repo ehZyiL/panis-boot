@@ -151,6 +151,11 @@
                 <artifactId>panis-boot-starter-job-quartz</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.izpan</groupId>
+                <artifactId>panis-boot-starter-relay-proxy</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -2,6 +2,7 @@ package com.izpan.infrastructure.config;
 
 import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.stp.StpUtil;
+import com.izpan.infrastructure.intercepter.TokenAuthInterceptor;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -35,17 +36,25 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
 
     // 业务放行接口
     public final String[] businessExcludePatterns = new String[]{
-            "/auth/user_name"
+            "/v1/completions",
+            "/v1/chat/completions",
+            "/v1/images",
+            "/v1/audio"
     };
 
     @Override
     public void addInterceptors(@NonNull InterceptorRegistry registry) {
-
         // sa token 路由拦截器，拦截器的优先级为最高
         registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
                 .addPathPatterns("/**")
                 .excludePathPatterns(swaggerExcludePatterns)
                 .excludePathPatterns(businessExcludePatterns)
                 .order(Ordered.HIGHEST_PRECEDENCE);
+        // 对外暴露的api
+        registry.addInterceptor(new TokenAuthInterceptor())
+                .addPathPatterns(businessExcludePatterns)
+                .order(Ordered.HIGHEST_PRECEDENCE);
     }
+
+
 }
