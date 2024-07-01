@@ -41,15 +41,19 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
             "/v1/images",
             "/v1/audio"
     };
-
+    public final String[] authExcludePatterns = new String[]{
+            "/auth/user_name"
+    };
     @Override
     public void addInterceptors(@NonNull InterceptorRegistry registry) {
         // sa token 路由拦截器，拦截器的优先级为最高
         registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
                 .addPathPatterns("/**")
                 .excludePathPatterns(swaggerExcludePatterns)
+                .excludePathPatterns(authExcludePatterns)
                 .excludePathPatterns(businessExcludePatterns)
                 .order(Ordered.HIGHEST_PRECEDENCE);
+
         // 对外暴露的api
         registry.addInterceptor(new TokenAuthInterceptor())
                 .addPathPatterns(businessExcludePatterns)

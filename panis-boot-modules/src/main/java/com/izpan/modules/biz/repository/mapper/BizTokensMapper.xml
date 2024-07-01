@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.izpan.modules.biz.repository.mapper.BizTokensMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BizTokensResultMap" type="com.izpan.modules.biz.domain.entity.BizTokens">
+        <result column="user_id" property="userId"/>
+        <result column="key" property="key"/>
+        <result column="status" property="status"/>
+        <result column="name" property="name"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="accessed_time" property="accessedTime"/>
+        <result column="expired_time" property="expiredTime"/>
+        <result column="remain_quota" property="remainQuota"/>
+        <result column="unlimited_quota" property="unlimitedQuota"/>
+        <result column="model_limits_enabled" property="modelLimitsEnabled"/>
+        <result column="model_limits" property="modelLimits"/>
+        <result column="used_quota" property="usedQuota"/>
+        <result column="deleted_at" property="deletedAt"/>
+        <result column="id" property="id"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BizTokensColumnList">
+        id
+        ,
+        user_id, key, status, name, created_time, accessed_time, expired_time, remain_quota, unlimited_quota, model_limits_enabled, model_limits, used_quota, deleted_at
+    </sql>
+
+</mapper>

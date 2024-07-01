@@ -31,13 +31,13 @@ public class CodeGenerator {
     private static final String PARENT = "com.izpan";
 
     // 生成的表名
-    private static final String TABLE_NAMES = "sys_role";
+    private static final String TABLE_NAMES = "biz_tokens";
 
     // 模块
-    private static final String MODULES = "system";
+    private static final String MODULES = "biz";
 
     // 生成作者
-    private static final String AUTHOR = "payne.zhuang <paynezhuang@gmail.com>";
+    private static final String AUTHOR = "ehzyil";
 
     // 自定义参数
     private static final Map<String, Object> CUSTOM_MAP = Maps.newHashMap();

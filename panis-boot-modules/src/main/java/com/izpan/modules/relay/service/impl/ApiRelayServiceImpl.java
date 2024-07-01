@@ -29,7 +29,7 @@ public class ApiRelayServiceImpl implements IApiRelayService {
     public Flux<String> chat(CompletionRequest request) throws Exception {
         Flux<String> response = Flux.create(sink -> {
             try {
-                EventSource eventSource = openAiSession.completions(request, new EventSourceListener() {
+                openAiSession.completions(request, new EventSourceListener() {
                     @Override
                     public void onEvent(EventSource eventSource, @Nullable String id, @Nullable String type, String data) {
                         if ("[DONE]".equalsIgnoreCase(data)) {

@@ -12,16 +12,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 public class TokenAuthInterceptor implements HandlerInterceptor {
     private static final String BEARER_PATTERN = "^Bearer\\s+sk-(.*)$"; // 修改正则表达式
 
-    public static String extractBearerToken(String authorizationHeader) {
-        if (authorizationHeader != null && !authorizationHeader.isEmpty()) {
-            Pattern pattern = Pattern.compile(BEARER_PATTERN);
-            Matcher matcher = pattern.matcher(authorizationHeader);
-            if (matcher.find()) {
-                return matcher.group(1);
-            }
-        }
-        return null; // 或抛出异常，取决于你的需求
-    }
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

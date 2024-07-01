@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.izpan.modules.biz.repository.mapper.BizChannelsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BizChannelsResultMap" type="com.izpan.modules.biz.domain.entity.BizChannels">
+        <result column="type" property="type"/>
+        <result column="key" property="key"/>
+        <result column="open_ai_organization" property="openAiOrganization"/>
+        <result column="test_model" property="testModel"/>
+        <result column="status" property="status"/>
+        <result column="name" property="name"/>
+        <result column="weight" property="weight"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="test_time" property="testTime"/>
+        <result column="response_time" property="responseTime"/>
+        <result column="base_url" property="baseUrl"/>
+        <result column="other" property="other"/>
+        <result column="balance" property="balance"/>
+        <result column="balance_updated_time" property="balanceUpdatedTime"/>
+        <result column="models" property="models"/>
+        <result column="group" property="group"/>
+        <result column="used_quota" property="usedQuota"/>
+        <result column="model_mapping" property="modelMapping"/>
+        <result column="status_code_mapping" property="statusCodeMapping"/>
+        <result column="priority" property="priority"/>
+        <result column="auto_ban" property="autoBan"/>
+        <result column="other_info" property="otherInfo"/>
+        <result column="id" property="id"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BizChannelsColumnList">
+        id
+        ,
+        type, key, open_ai_organization, test_model, status, name, weight, created_time, test_time, response_time, base_url, other, balance, balance_updated_time, models, group, used_quota, model_mapping, status_code_mapping, priority, auto_ban, other_info
+    </sql>
+
+</mapper>

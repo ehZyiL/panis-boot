@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.izpan.modules.biz.repository.mapper.BizQuotaDataMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BizQuotaDataResultMap" type="com.izpan.modules.biz.domain.entity.BizQuotaData">
+        <result column="user_id" property="userId"/>
+        <result column="username" property="username"/>
+        <result column="model_name" property="modelName"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="token_used" property="tokenUsed"/>
+        <result column="count" property="count"/>
+        <result column="quota" property="quota"/>
+        <result column="id" property="id"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BizQuotaDataColumnList">
+        id
+        ,
+        user_id, username, model_name, created_at, token_used, count, quota
+    </sql>
+
+</mapper>

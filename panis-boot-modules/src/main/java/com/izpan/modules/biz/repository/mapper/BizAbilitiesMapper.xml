@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.izpan.modules.biz.repository.mapper.BizAbilitiesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BizAbilitiesResultMap" type="com.izpan.modules.biz.domain.entity.BizAbilities">
+        <id column="group" property="group"/>
+        <id column="model" property="model"/>
+        <id column="channel_id" property="channelId"/>
+        <result column="enabled" property="enabled"/>
+        <result column="priority" property="priority"/>
+        <result column="weight" property="weight"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BizAbilitiesColumnList">
+        group, model, channel_id, enabled, priority, weight
+    </sql>
+
+</mapper>
