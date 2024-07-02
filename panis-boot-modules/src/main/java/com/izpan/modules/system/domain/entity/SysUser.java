@@ -30,7 +30,7 @@ public class SysUser extends BaseEntity {
     private static final long serialVersionUID = -8785649008167413252L;
 
     /**
-     * 用户名
+     * 用户名称
      */
     private String userName;
 
@@ -45,11 +45,6 @@ public class SysUser extends BaseEntity {
     private String nickName;
 
     /**
-     * 真名
-     */
-    private String realName;
-
-    /**
      * 头像
      */
     private String avatar;
@@ -60,22 +55,72 @@ public class SysUser extends BaseEntity {
     private String email;
 
     /**
-     * 手机
+     * GitHub ID
      */
-    private String phone;
+    private String githubId;
 
     /**
-     * 性别 0保密 1男 2女
+     * 微信ID
      */
-    private String gender;
+    private String wechatId;
 
     /**
-     * 是否启用(0:禁用,1:启用)
+     * Telegram ID
      */
-    private String status;
+    private String telegramId;
 
     /**
-     * MD5的盐值，混淆密码
+     * 访问令牌
+     */
+    private String accessToken;
+
+    /**
+     * 配额
+     */
+    private Long quota;
+
+    /**
+     * 已用配额
+     */
+    private Long usedQuota;
+
+    /**
+     * 请求数量
+     */
+    private Long requestCount;
+
+    /**
+     * 分组
+     */
+    private String group;
+
+    /**
+     * 邀请码
+     */
+    private String affCode;
+
+    /**
+     * 邀请数量
+     */
+    private Long affCount;
+
+    /**
+     * 邀请配额
+     */
+    private Long affQuota;
+
+    /**
+     * 邀请历史
+     */
+    private Long affHistory;
+
+    /**
+     * 邀请人ID
+     */
+    private Long inviterId;
+
+    /**
+     * MD5的盐值
      */
     private String salt;
 
@@ -88,4 +133,9 @@ public class SysUser extends BaseEntity {
      * 修改密码时间
      */
     private LocalDateTime updatePasswordTime;
+
+    /**
+     * 是否启用(0:禁用,1:启用)
+     */
+    private String status;
 }

@@ -29,42 +29,68 @@ public class SysUserVO extends BaseVO {
 
     @Serial
     private static final long serialVersionUID = -3621474283154332722L;
-
-    @Schema(description = "用户名")
+    @Schema(description = "用户名称")
     private String userName;
 
     @Schema(description = "昵称")
     private String nickName;
 
-    @Schema(description = "真实姓名")
-    private String realName;
-
-    @Schema(description = "头像URL")
+    @Schema(description = "头像")
     private String avatar;
 
     @Schema(description = "邮箱")
     private String email;
 
-    @Schema(description = "手机号码")
-    private String phone;
+    @Schema(description = "GitHub ID")
+    private String githubId;
 
-    @Schema(description = "性别 0保密 1男 2女 ")
-    private String gender;
+    @Schema(description = "微信ID")
+    private String wechatId;
 
-    @Schema(description = "状态 0禁用 1启用")
-    private String status;
+    @Schema(description = "Telegram ID")
+    private String telegramId;
 
-    @Schema(description = "最近登录时间")
+    @Schema(description = "访问令牌")
+    private String accessToken;
+
+    @Schema(description = "配额")
+    private Long quota;
+
+    @Schema(description = "已用配额")
+    private Long usedQuota;
+
+    @Schema(description = "请求数量")
+    private Long requestCount;
+
+    @Schema(description = "分组")
+    private String group;
+
+    @Schema(description = "邀请码")
+    private String affCode;
+
+    @Schema(description = "邀请数量")
+    private Long affCount;
+
+    @Schema(description = "邀请配额")
+    private Long affQuota;
+
+    @Schema(description = "邀请历史")
+    private Long affHistory;
+
+    @Schema(description = "邀请人ID")
+    private Long inviterId;
+
+    @Schema(description = "MD5的盐值")
+    private String salt;
+
+    @Schema(description = "最后登录时间")
     private LocalDateTime lastLoginTime;
 
-    @Schema(description = "最近修改密码时间")
+    @Schema(description = "修改密码时间")
     private LocalDateTime updatePasswordTime;
 
-    @Schema(description = "更新用户名称")
-    private String updateUser;
-
-    @Schema(description = "更新时间")
-    private LocalDateTime updateTime;
+    @Schema(description = "是否启用(0:禁用,1:启用)")
+    private String status;
 
     @Schema(description = "路由权限按钮")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)

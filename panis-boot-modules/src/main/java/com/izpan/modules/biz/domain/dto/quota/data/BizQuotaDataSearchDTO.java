@@ -7,17 +7,17 @@ import lombok.Setter;
 import java.io.Serializable;
 
 /**
- * 查询 DTO 对象
+ * 配额数据管理 查询 DTO 对象
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.domain.dto.quota.data.BizQuotaDataSearchDTO
- * @CreateTime 2024-07-01 - 22:02:37
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.dto.quota.data.BizQuotaDataSearchDTO
+ * @CreateTime 2024-07-02 - 12:19:52
  */
 
 @Getter
 @Setter
-@Schema(name = "BizQuotaDataSearchDTO", description = " 查询 DTO 对象")
+@Schema(name = "BizQuotaDataSearchDTO", description = "配额数据管理 查询 DTO 对象")
 public class BizQuotaDataSearchDTO implements Serializable {
 
 

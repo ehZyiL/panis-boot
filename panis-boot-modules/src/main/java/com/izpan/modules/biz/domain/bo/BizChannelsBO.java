@@ -6,12 +6,12 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * BO 业务处理对象
+ * 业务渠道管理 BO 业务处理对象
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.domain.bo.BizChannelsBO
- * @CreateTime 2024-07-01 - 22:02:12
+ * @ClassName com.izpan.modules.biz.domain.bo.BizChannelsBO
+ * @CreateTime 2024-07-02 - 12:19:10
  */
 
 @Data

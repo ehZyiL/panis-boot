@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.izpan.modules.biz.repository.mapper.BizRedemptionsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BizRedemptionsResultMap" type="com.izpan.modules.biz.domain.entity.BizRedemptions">
+        <result column="user_id" property="userId"/>
+        <result column="key" property="key"/>
+        <result column="status" property="status"/>
+        <result column="name" property="name"/>
+        <result column="quota" property="quota"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="redeemed_time" property="redeemedTime"/>
+        <result column="used_user_id" property="usedUserId"/>
+        <result column="deleted_at" property="deletedAt"/>
+        <result column="id" property="id"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BizRedemptionsColumnList">
+        id
+        ,
+        user_id, key, status, name, quota, created_time, redeemed_time, used_user_id, deleted_at
+    </sql>
+
+</mapper>

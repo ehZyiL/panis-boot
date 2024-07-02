@@ -63,7 +63,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     public IPage<SysUser> listSysUserPage(PageQuery pageQuery, SysUserBO sysUserBO) {
         var queryWrapper = new LambdaQueryWrapper<SysUser>()
                 .like(ObjectUtils.isNotEmpty(sysUserBO.getUserName()), SysUser::getUserName, sysUserBO.getUserName())
-                .like(ObjectUtils.isNotEmpty(sysUserBO.getRealName()), SysUser::getRealName, sysUserBO.getRealName())
                 .like(ObjectUtils.isNotEmpty(sysUserBO.getEmail()), SysUser::getEmail, sysUserBO.getEmail())
                 .eq(ObjectUtils.isNotEmpty(sysUserBO.getStatus()), SysUser::getStatus, sysUserBO.getStatus());
         return baseMapper.selectPage(pageQuery.buildPage(), queryWrapper);
@@ -145,7 +144,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             userForUserName.setLastLoginTime(LocalDateTime.now());
             saveUserToSession(userForUserName, false);
             loginLogs.setUserId(userForUserName.getId());
-            loginLogs.setUserRealName(userForUserName.getRealName());
             super.updateById(userForUserName);
         } catch (BizException e) {
             loginLogs.setStatus(StringPools.ZERO);

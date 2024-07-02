@@ -10,20 +10,20 @@ import lombok.experimental.SuperBuilder;
 import java.time.LocalDateTime;
 
 /**
- * 令牌管理 Entity 实体类
+ * 兑换管理 Entity 实体类
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.modules.biz.domain.entity.BizTokens
- * @CreateTime 2024-07-02 - 12:20:18
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.entity.BizRedemptions
+ * @CreateTime 2024-07-02 - 12:20:01
  */
 
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("biz_tokens")
-public class BizTokens extends BaseEntity {
+@TableName("biz_redemptions")
+public class BizRedemptions extends BaseEntity {
 
     /**
      * 用户ID
@@ -31,7 +31,7 @@ public class BizTokens extends BaseEntity {
     private Long userId;
 
     /**
-     * 密钥
+     * 兑换码
      */
     private String key;
 
@@ -46,44 +46,24 @@ public class BizTokens extends BaseEntity {
     private String name;
 
     /**
+     * 配额
+     */
+    private Long quota;
+
+    /**
      * 创建时间
      */
     private Long createdTime;
 
     /**
-     * 访问时间
+     * 兑换时间
      */
-    private Long accessedTime;
+    private Long redeemedTime;
 
     /**
-     * 过期时间
+     * 使用用户ID
      */
-    private Long expiredTime;
-
-    /**
-     * 剩余配额
-     */
-    private Long remainQuota;
-
-    /**
-     * 无限配额
-     */
-    private Boolean unlimitedQuota;
-
-    /**
-     * 模型限制启用
-     */
-    private Boolean modelLimitsEnabled;
-
-    /**
-     * 模型限制
-     */
-    private String modelLimits;
-
-    /**
-     * 已用配额
-     */
-    private Long usedQuota;
+    private Long usedUserId;
 
     /**
      * 删除时间

@@ -7,17 +7,17 @@ import lombok.Setter;
 import java.io.Serializable;
 
 /**
- * 新增 DTO 对象
+ * 业务渠道管理 新增 DTO 对象
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.domain.dto.channels.BizChannelsAddDTO
- * @CreateTime 2024-07-01 - 22:02:12
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.dto.channels.BizChannelsAddDTO
+ * @CreateTime 2024-07-02 - 12:19:10
  */
 
 @Getter
 @Setter
-@Schema(name = "BizChannelsAddDTO", description = " 新增 DTO 对象")
+@Schema(name = "BizChannelsAddDTO", description = "业务渠道管理 新增 DTO 对象")
 public class BizChannelsAddDTO implements Serializable {
 
 

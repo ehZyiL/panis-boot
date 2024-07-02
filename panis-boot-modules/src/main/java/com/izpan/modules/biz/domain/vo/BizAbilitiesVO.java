@@ -1,7 +1,5 @@
 package com.izpan.modules.biz.domain.vo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.izpan.infrastructure.domain.BaseVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -10,33 +8,36 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 /**
- * VO 展示类
+ * 能力管理 VO 展示类
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.domain.vo.BizAbilitiesVO
- * @CreateTime 2024-07-01 - 22:02:52
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.vo.BizAbilitiesVO
+ * @CreateTime 2024-07-02 - 12:19:01
  */
 
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "BizAbilitiesVO", description = " VO 对象")
+@Schema(name = "BizAbilitiesVO", description = "能力管理 VO 对象")
 public class BizAbilitiesVO extends BaseVO {
 
-    @TableId(value = "group", type = IdType.ASSIGN_ID)
+    @Schema(description = "分组")
     private String group;
 
-    @TableId(value = "model", type = IdType.ASSIGN_ID)
+    @Schema(description = "模型名称")
     private String model;
 
-    @TableId(value = "channel_id", type = IdType.ASSIGN_ID)
+    @Schema(description = "渠道ID")
     private Long channelId;
 
+    @Schema(description = "是否启用")
     private Boolean enabled;
 
+    @Schema(description = "优先级")
     private Long priority;
 
+    @Schema(description = "权重")
     private Long weight;
 }

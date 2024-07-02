@@ -7,17 +7,17 @@ import lombok.Setter;
 import java.io.Serializable;
 
 /**
- * 编辑更新 DTO 对象
+ * 配额数据管理 编辑更新 DTO 对象
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.domain.dto.quota.data.BizQuotaDataUpdateDTO
- * @CreateTime 2024-07-01 - 22:02:37
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.dto.quota.data.BizQuotaDataUpdateDTO
+ * @CreateTime 2024-07-02 - 12:19:52
  */
 
 @Getter
 @Setter
-@Schema(name = "BizQuotaDataUpdateDTO", description = " 编辑更新 DTO 对象")
+@Schema(name = "BizQuotaDataUpdateDTO", description = "配额数据管理 编辑更新 DTO 对象")
 public class BizQuotaDataUpdateDTO implements Serializable {
 
 

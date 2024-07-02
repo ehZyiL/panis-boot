@@ -8,17 +8,17 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 删除 DTO 对象
+ * 能力管理 删除 DTO 对象
  *
  * @Author ehzyil
  * @ProjectName panis-boot
- * @ClassName com.izpan.modules.biz.domain.dto.abilities.BizAbilitiesDeleteDTO
- * @CreateTime 2024-07-01 - 22:02:52
+ * @ClassName com.izpan.modules.biz.modules.biz.domain.dto.abilities.BizAbilitiesDeleteDTO
+ * @CreateTime 2024-07-02 - 12:19:01
  */
 
 @Getter
 @Setter
-@Schema(name = "BizAbilitiesDeleteDTO", description = " 删除 DTO 对象")
+@Schema(name = "BizAbilitiesDeleteDTO", description = "能力管理 删除 DTO 对象")
 public class BizAbilitiesDeleteDTO implements Serializable {
 
     @Schema(description = "IDs")
